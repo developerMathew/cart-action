@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Libertinus+Mono&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=My+Soul&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>CART</title>
+</head>
+
+<body>
+    <header>
+        <h1>CART DESIGN</h1>
+        <nav class="navbar">
+            <div class="navlist show">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">PRODUCT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="cart">
+                <button>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count"></span>
+                </button>
+            </div>
+
+            <div class="menu">
+                <button><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+
+    </header>
+    <div class="product-card">
+        <div class="pro-img"></div>
+        <button onclick="addcart(this)">ADD TO CART</button>
+    </div>
+
+    <script>
+        let button = document.querySelector(".menu button"), links = document.querySelector(".navlist")
+
+        button.addEventListener('click', () => {
+            links.classList.toggle('display')
+        })
+
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
